@@ -148,8 +148,8 @@ label.underline:before {
 /* Hero  */
 .hero-section {
     position: relative;
-    padding-top: 195px;
-    padding-bottom: 195px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-image: url('../images/xrdocs-hero-image.png');
     background-position: 50% 50%;
     background-size: cover;
