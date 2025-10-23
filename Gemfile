@@ -4,5 +4,5 @@ gem "github-pages"
 # gem "jekyll-archives"
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 # gem "html-proofer"
-# gem "nokogiri", "~> 1.8.1"
+# gem "nokogiri", "~> 1.12.0"  # Ruby 2.7 compatible
 
