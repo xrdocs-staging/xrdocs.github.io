@@ -41,7 +41,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-west-1
       
-      - name: Sync to S3
+      - name: Sync to S3 (subfolder)
         run: |
           aws s3 sync _site/ s3://${{ secrets.S3_BUCKET }}/${{ github.event.repository.name }}/ \
             --delete \
@@ -49,11 +49,44 @@ jobs:
             --exclude ".git/*" \
             --exclude ".github/*"
       
-      - name: Invalidate CloudFront cache
+      - name: Sync to S3 root (home page)
+        run: |
+          echo "Deploying xrdocs.github.io to S3 root so CloudFront root URL works"
+          aws s3 sync _site/ s3://${{ secrets.S3_BUCKET }}/ \
+            --cache-control "public, max-age=300" \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "telemetry/*" \
+            --exclude "programmability/*" \
+            --exclude "application-hosting/*" \
+            --exclude "ncs5500/*" \
+            --exclude "asr9k/*" \
+            --exclude "8000/*" \
+            --exclude "automation/*" \
+            --exclude "cnbng/*" \
+            --exclude "design/*" \
+            --exclude "multicast/*" \
+            --exclude "packet-fronthaul/*" \
+            --exclude "routed-pon/*" \
+            --exclude "security/*" \
+            --exclude "cisco-service-layer/*" \
+            --exclude "SONiC/*" \
+            --exclude "cloud-scale-networking/*" \
+            --exclude "virtual-routing/*" \
+            --exclude "ztp/*" \
+            --exclude "xrdocs.github.io/*"
+      
+      - name: Invalidate CloudFront cache (subfolder)
         run: |
           aws cloudfront create-invalidation \
             --distribution-id ${{ secrets.CF_DIST_ID }} \
             --paths "/${{ github.event.repository.name }}/*"
+      
+      - name: Invalidate CloudFront cache (root)
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CF_DIST_ID }} \
+            --paths "/*"
       
       - name: Deployment summary
         run: |
