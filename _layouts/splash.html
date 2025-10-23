@@ -6,27 +6,27 @@
     <meta property="og:locale" content="en-US">
     <meta property="og:site_name" content="Cisco IOS XR Documentation @xrdocs">
     <meta property="og:title" content="@xrdocs">
-    <link rel="canonical" href="https://xrdocs.io/">
-    <meta property="og:url" content="https://xrdocs.io/">
+    <link rel="canonical" href="{{ site.url }}/">
+    <meta property="og:url" content="{{ site.url }}/">
     <meta name="twitter:site" content="@xrdocs">
     <meta name="twitter:title" content="@xrdocs">
     <meta name="twitter:description" content="Documentation, Blogs and Tutorials on all things IOS-XR: An Open,
     Extensible and Stable Cloud-Scale Network Operating System">
-    <meta name="twitter:url" content="https://xrdocs.io/">
+    <meta name="twitter:url" content="{{ site.url }}/">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="https://xrdocs.io/images/xrdocs_logo.png">
+    <meta name="twitter:image" content="{{ site.url }}/images/xrdocs_logo.png">
     <meta property="og:type" content="article">
     <script type="application/ld+json">
-        { "@context": "http://schema.org", "@type": "Organization", "url": "https://xrdocs.io",
-            "logo": "https://xrdocs.io/images/xrdocs_logo.png" }
+        { "@context": "http://schema.org", "@type": "Organization", "url": "{{ site.url }}",
+            "logo": "{{ site.url }}/images/xrdocs_logo.png" }
     </script>
     <script type="application/ld+json">
         { "@context" : "http://schema.org", "@type" : "person", "name" : "Cisco Systems Inc",
-            "url" : "https://xrdocs.io", "sameAs" : ["https://twitter.com/xrdocs"] }
+            "url" : "{{ site.url }}", "sameAs" : ["https://twitter.com/xrdocs"] }
     </script>
     <!-- end SEO -->
     <meta name="google-site-verification" content="jgRKKm6B9FwJJPXxpmc0-EP3D0Mh8JHXaJqoYIGj1ek"/>
-    <link href="https://xrdocs.io/feed.xml" type="application/atom+xml" rel="alternate" title="Cisco IOS XR Documentation @xrdocs Feed">
+    <link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="Cisco IOS XR Documentation @xrdocs Feed">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="css_new/cisco.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="path/xmlToJSON.js"></script>
@@ -45,7 +45,7 @@
 <body>
 <div class=nav-container>
     <nav>
-        <a href="https://xrdocs.io" ><img class="nav-logo" id="nav-logo" src="images/xrdocs_logo.png" alt="xrdoc brand logo"></a>
+        <a href="{{ site.url }}/" ><img class="nav-logo" id="nav-logo" src="images/xrdocs_logo.png" alt="xrdoc brand logo"></a>
         <div class="navbar" id="mylinks">
             <div class="dropdown nav-link">
                 <label class="underline">Technologies <i class="fa fa-caret-down"></i>
@@ -104,7 +104,7 @@
         <h1 class="hero-heading">@xrdocs</h1>
         <div class="sub">Documentation blogs and tutorials on all things IOS-XR</div>
         <div class="sub-2">An open, extensible and stable cloud-scale network operating system</div>
-        <div ><a href="https://xrdocs.io/getting-started" class="button blue-bg">Get started</a></div>
+        <div ><a href="{{ site.url }}/getting-started" class="button blue-bg">Get started</a></div>
     </div>
 </div>
 <!-- 
@@ -114,7 +114,7 @@
             <p>🆕 IOS-XR power consumption monitoring</p>
         </div>
         <div class="col-25">
-            <a href="https://xrdocs.io/telemetry/tutorials/ios-xr-telemetry-power-consumption-docker-compose/"
+            <a href="{{ site.url }}/telemetry/tutorials/ios-xr-telemetry-power-consumption-docker-compose/"
                class="button spotlight dark-blue-bg">Learn More</a>
         </div>
     </div>
@@ -333,7 +333,7 @@
     .catch(error => console.error('Error:', error));
 </script>
         
-<!--        <a href="https://xrdocs.io/programmability/tutorials/2020-12-02-nornir-overview/" target="_blank">
+<!--        <a href="{{ site.url }}/programmability/tutorials/2020-12-02-nornir-overview/" target="_blank">
             <div class="transparent box-blog">
                 <h2 class="blog-title">Nornir Overview</h2>
                     <h3 class="blog-description">Nornir is the new automation framework which grabbed the attention of
@@ -341,14 +341,14 @@
             </div>
         </a>
 
-        <a href="https://xrdocs.io/programmability/tutorials/pyats-series-install-and-use-pyats/" target="_blank">
+        <a href="{{ site.url }}/programmability/tutorials/pyats-series-install-and-use-pyats/" target="_blank">
             <div class="transparent box-blog">
                 <h2 class="blog-title">pyATS series - Install and use pyATS</h2>
                 <h3 class="blog-description">Installation of pyATS and collecting your first CLI output</h3>
             </div>
         </a>
 
-        <a href="https://xrdocs.io/telemetry/tutorials/ios-xr-telemetry-power-consumption-docker-compose/" target="_blank">
+        <a href="{{ site.url }}/telemetry/tutorials/ios-xr-telemetry-power-consumption-docker-compose/" target="_blank">
             <div class="transparent box-blog">
                 <h2 class="blog-title">IOS-XR power consumption monitoring: an ephemeral telemetry stack use case</h2>
                 <h3 class="blog-description">This post will describe how a docker-based ephemeral telemetry stack has been built to monitor Cisco IOS-XR device power consumption.</h3>
