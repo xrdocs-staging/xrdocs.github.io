@@ -22,7 +22,7 @@ permalink: /ios-xr-ciscolive-las-vegas-2022
 
 CiscoLive is back! Scheduled for June 12-16, 2022 in Las Vegas, this in-person and digital event will be unique opportunity to reconnect after a long break.  
 
-The Service Provider track will cover most [xrdocs.io](https://xrdocs.io) topics of interest such:
+The Service Provider track will cover most [xrdocs.io]({{site.url}}) topics of interest such:
 - 5G - Service Provider Deployment Considerations 
 - Converged SDN Transport Architecture 
 - Private 5G Enablers, Use Cases and Implementation 
